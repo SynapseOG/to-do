@@ -1,0 +1,17 @@
+﻿@model to_do.Models.ToDoUpdate
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<form class="form-text" asp-controller="ToDo" asp-action="EditPost">
+   <div hidden="hidden"><input asp-for="Id"/></div>
+    <p><input type="text" value="@Model.Name" asp-for="Name" /></p>
+    <p><input type="date" value="@Model.Date" asp-for="Date"/></p>
+    <p><input type="text" value="@Model.Notes" asp-for="Notes" /></p>
+
+    <span><input type="submit" class="btn btn-success"/></span>
+ 
+</form>
+

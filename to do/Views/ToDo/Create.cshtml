@@ -1,0 +1,27 @@
+﻿@model to_do.Models.ToDoCreate
+@{
+    ViewData["Title"] = "Create";
+}
+
+<section>
+    <h1>Utwórz zadanie</h1>
+</section>
+
+
+<form asp-controller="ToDo" asp-action="Create" method="post">
+   <div asp-validation-summary="ModelOnly"></div>
+
+     <div class="form-control">
+       <label>Nazwa</label>
+        <p><input type="text" asp-for="Name"  /></p>
+
+       <label>Opis</label>
+        <p><input type="text" asp-for="Notes" /></p>
+
+       <label>Data</label>
+        <p><input type="date" asp-for="Date" /></p>
+       </div>
+
+   <input type="submit" value="Submit" class="btn btn-success"/>
+</form>
+
